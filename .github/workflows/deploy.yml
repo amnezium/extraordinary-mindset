@@ -32,7 +32,7 @@ jobs:
       - name: Build project
         env:
           VITE_TG_ACCOUNT: ${{ vars.VITE_TG_ACCOUNT }}
-          VITE_METRIKA_ID: ${{ vars.VITE_METRIKA_ID }}
+          VITE_METRIKA_ID: ${{ secrets.VITE_METRIKA_ID }}
         run: bun run build
 
       - name: Deploy via FTP
